@@ -80,7 +80,7 @@ Run the container in detached mode, binding **port 4100** on the host to **port 
 
 Open a browser and visit:
 
-   - http://<your-ec2-public-ip>:4100
+   - http://your-ec2-public-ip:4100
 
 You will see the Netflix Clone static website served from Docker.
 
@@ -118,7 +118,7 @@ Confirm that the project folder is gone:
 
 Open your browser again:
 
-   - http://<your-ec2-public-ip>:4100
+   - http://your-ec2-public-ip:4100
 
 
 You will **still see your Netflix Clone running!**
