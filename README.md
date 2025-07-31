@@ -20,13 +20,13 @@ This project demonstrates how to deploy a **static Netflix Clone website** (HTML
 
 SSH into your EC2 instance and run:
 
-   sudo apt update
-   sudo apt install docker.io -y
+   - sudo apt update
+   - sudo apt install docker.io -y
 
 
 Verify Docker installation:
 
-   docker --version
+   - docker --version
 
 ---
 
@@ -34,12 +34,12 @@ Verify Docker installation:
 
 Install Git on the EC2 instance:
 
-   sudo apt-get update
-   sudo apt-get install git -y
+   - sudo apt-get update
+   - sudo apt-get install git -y
 
 Verify Git installation:
 
-   git --version
+   - git --version
 
 ---
 
@@ -47,8 +47,8 @@ Verify Git installation:
 
 Navigate to your home directory and clone the repository:
 
-   cd /home/ubuntu
-   git clone https://github.com/abhuu123/netflix-on-docker.git
+   - cd /home/ubuntu
+   - git clone https://github.com/abhuu123/netflix-on-docker.git
 
 ---
 
@@ -56,15 +56,15 @@ Navigate to your home directory and clone the repository:
 
 Move into the cloned repository:
 
-   cd netflix-on-docker
+   - cd netflix-on-docker
 
 Build the Docker image (don’t forget the `.` at the end):
 
-   sudo docker build -t netflix-clone .
+   - sudo docker build -t netflix-clone .
 
 List Docker images to confirm:
 
-   sudo docker images
+   - sudo docker images
 
 ---
 
@@ -72,7 +72,7 @@ List Docker images to confirm:
 
 Run the container in detached mode, binding **port 4100** on the host to **port 80** inside the container:
 
-   sudo docker run -d -p 4100:80 netflix-clone
+   - sudo docker run -d -p 4100:80 netflix-clone
    
 ---
 
@@ -80,7 +80,7 @@ Run the container in detached mode, binding **port 4100** on the host to **port 
 
 Open a browser and visit:
 
-   http://<your-ec2-public-ip>:4100
+   - http://<your-ec2-public-ip>:4100
 
 You will see the Netflix Clone static website served from Docker.
 
@@ -96,7 +96,7 @@ Even if you delete your project files from the EC2 instance, your container will
 
 ### Step 1: Verify Container is Running
 
-  sudo docker ps
+  - sudo docker ps
 
 You will see a container running (STATUS should be "Up").
 
@@ -104,12 +104,12 @@ You will see a container running (STATUS should be "Up").
 
 ### Step 2: Delete All Files in the Cloned Folder
 
-  cd /home/ubuntu
-  sudo rm -rf netflix-on-docker
+  - cd /home/ubuntu
+  - sudo rm -rf netflix-on-docker
 
 Confirm that the project folder is gone:
 
-   ls
+   - ls
 
 
 ---
@@ -118,7 +118,7 @@ Confirm that the project folder is gone:
 
 Open your browser again:
 
-   http://<your-ec2-public-ip>:4100
+   - http://<your-ec2-public-ip>:4100
 
 
 You will **still see your Netflix Clone running!**
@@ -131,12 +131,12 @@ This is because the container runs independently of the source code on your EC2 
 
 To stop the running container:
 
-  sudo docker ps
-  sudo docker stop <container_id>
+  - sudo docker ps
+  - sudo docker stop <container_id>
 
 If you want to remove unused containers and images:
 
-   sudo docker system prune -a
+   - sudo docker system prune -a
    
 ---
 
