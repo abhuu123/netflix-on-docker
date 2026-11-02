@@ -4,7 +4,7 @@ This project demonstrates how to deploy a **static Netflix Clone website** (HTML
 
 ## Prerequisites
 
-- **AWS EC2 instance**
+- **AWS EC2 instance*
   - OS: Ubuntu
   - Type: t2.medium (or higher recommended)
 - **Security Group Rules**
